@@ -127,13 +127,13 @@ function SelectedItemValue(SelectId){
     }
     else if (SelectId == "gpu") {
         summaryGPU.innerText = gpu[strAtt].name + " " + gpu[strAtt].price
-        cart[0].price = gpu[strAtt].price
-        cart[0].name = gpu[strAtt].name
+        cart[2].price = gpu[strAtt].price
+        cart[2].name = gpu[strAtt].name
     }
     else if (SelectId == "ram") {
         summaryRAM.innerText = ram[strAtt].name + " " + ram[strAtt].price
-        cart[0].price = ram[strAtt].price
-        cart[0].name = ram[strAtt].name
+        cart[3].price = ram[strAtt].price
+        cart[3].name = ram[strAtt].name
     }
     document.getElementById("sumAll").innerHTML="<b>Wartość produktów: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price)+"</b>"
 }
