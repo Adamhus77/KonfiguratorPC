@@ -58,6 +58,26 @@ const gpu = [
         producent:"GeForce"
     },
 ]
+const ram = [
+    {
+        id: 0,
+        name:"ADATA Gammix D10, DDR4, 16 GB, 3200MHz, CL16",
+        price: 289,
+        producent:"Adata"
+    },
+    {
+        id: 1,
+        name:"GoodRam IRDM, DDR4, 16 GB, 3600MHz, CL17",
+        price: 319,
+        producent:"GoodRam"
+    },
+    {
+        id: 2,
+        name:"Crucial Ballistix Black at DDR4 3000 DRAM Desktop Gaming Memory Kit 16GB (8GBx2) CL15",
+        price: 299,
+        producent:"Ballistix"
+    },
+]
 var cart = [
     {
         name: 'mb',
@@ -69,6 +89,10 @@ var cart = [
     },
     {
         name: 'gpu',
+        price:0
+    },
+    {
+        name: 'ram',
         price:0
     }
 ]
@@ -89,6 +113,7 @@ function SelectedItemValue(SelectId){
     const summaryCPU = document.getElementById("summaryCPU");
     const summaryMB = document.getElementById("summaryMB");
     const summaryGPU = document.getElementById("summaryGPU");
+    const summaryRAM = document.getElementById("summaryRAM");
 
     if (SelectId == "mb") {
         summaryMB.innerText = mb[strAtt].name + " " + mb[strAtt].price
@@ -105,7 +130,12 @@ function SelectedItemValue(SelectId){
         cart[0].price = gpu[strAtt].price
         cart[0].name = gpu[strAtt].name
     }
-    document.getElementById("sumAll").innerHTML="<b>Wartość produktów: "+ (cart[0].price+cart[1].price+cart[2].price)+"</b>"
+    else if (SelectId == "ram") {
+        summaryRAM.innerText = ram[strAtt].name + " " + ram[strAtt].price
+        cart[0].price = ram[strAtt].price
+        cart[0].name = ram[strAtt].name
+    }
+    document.getElementById("sumAll").innerHTML="<b>Wartość produktów: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price)+"</b>"
 }
 
 for(let i=0; i<mb.length; i++) {
@@ -116,6 +146,9 @@ for(let i=0; i<cpu.length; i++) {
 }
 for(let i=0; i<gpu.length; i++) {
     addOpt("gpu", gpu[i].id, gpu[i].name)
+}
+for(let i=0; i<ram.length; i++) {
+    addOpt("ram", ram[i].id, ram[i].name)
 }
 let summaryCompHandler = document.getElementById("summaryComp");
 
