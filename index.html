@@ -10,24 +10,37 @@
     <section id="selectComp">
         <table>
             <tr>
-                <td>Płyta główna</td>
+                <td>Płyta główna:</td>
                 <td>
                     <select name="mb" id="mb" onchange="SelectedItemValue('mb')">
                     </select>
                 </td>
-                <td>Procesor</td>
+            </tr>
+            <tr>
+                <td>Procesor:</td>
                 <td>
                     <select name="cpu" id="cpu" onchange="SelectedItemValue('cpu')">
                     </select>
                 </td>
-                <td>Karta graficzna</td>
+            </tr>
+            <tr>
+                <td>Karta graficzna:</td>
                 <td>
                     <select name="gpu" id="gpu" onchange="SelectedItemValue('gpu')">
                     </select>
                 </td>
-                <td>Pamięć RAM</td>
+            </tr>
+            <tr>
+                <td>Pamięć RAM:</td>
                 <td>
                     <select name="ram" id="ram" onchange="SelectedItemValue('ram')">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zasilanie:</td>
+                <td>
+                    <select name="psu" id="psu" onchange="SelectedItemValue('psu')">
                     </select>
                 </td>
             </tr>
@@ -38,6 +51,7 @@
         <div id="summaryMB"></div>
         <div id="summaryGPU"></div>
         <div id="summaryRAM"></div>
+        <div id="summaryPSU"></div>
     </section>
     <div id="sumAll"></div>
     <section id="border">

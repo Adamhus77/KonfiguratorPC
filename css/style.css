@@ -15,3 +15,13 @@ body{
     margin-top: 12px;
     margin-bottom: 10px;
 }
+
+#summaryComp div {
+    display: block;
+}
+#selectComp select {
+    color:white;
+    font-family: Lato;
+    font-size: large;
+    background-color: #060a26;
+}

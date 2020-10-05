@@ -1,4 +1,4 @@
-const mb = [
+const mb = [                    /* produkt 0 */
     {
         id: 0,
         name:"Gigabyte B450 AORUS ELITE",
@@ -18,7 +18,7 @@ const mb = [
         producent:"MSI"
     },
 ]
-const cpu = [
+const cpu = [                    /* produkt 1 */
     {
         id: 0,
         name:"AMD Ryzen 3 3100, 3.6GHz, 16 MB, BOX",
@@ -38,7 +38,7 @@ const cpu = [
         producent:"Intel"
     },
 ]
-const gpu = [
+const gpu = [                    /* produkt 2 */
     {
         id: 0,
         name:"Gigabyte GeForce RTX 2060 OC 6GB GDDR6",
@@ -58,7 +58,7 @@ const gpu = [
         producent:"GeForce"
     },
 ]
-const ram = [
+const ram = [                    /* produkt 3 */
     {
         id: 0,
         name:"ADATA Gammix D10, DDR4, 16 GB, 3200MHz, CL16",
@@ -78,21 +78,45 @@ const ram = [
         producent:"Ballistix"
     },
 ]
+const psu = [                    /* produkt 4 */
+    {
+        id: 0,
+        name:"SilentiumPC Vero L3 500W",
+        price: 219,
+        producent:"Silentium"
+    },
+    {
+        id: 1,
+        name:"be quiet! SYSTEM POWER 9 500W",
+        price: 237,
+        producent:"be quiet!"
+    },
+    {
+        id: 2,
+        name:"Thermaltake Smart BM1 600W",
+        price: 289,
+        producent:"Thermaltake"
+    },
+]
 var cart = [
     {
-        name: 'mb',
+        name: 'mb',     /*cart 0 */
         price:0
     },
     {
-        name: 'cpu',
+        name: 'cpu',    /*cart 1 */
         price:0
     },
     {
-        name: 'gpu',
+        name: 'gpu',    /*cart 2 */
         price:0
     },
     {
-        name: 'ram',
+        name: 'ram',    /*cart 3 */
+        price:0
+    },
+    {
+        name: 'psu',    /*cart 4 */
         price:0
     }
 ]
@@ -114,6 +138,7 @@ function SelectedItemValue(SelectId){
     const summaryMB = document.getElementById("summaryMB");
     const summaryGPU = document.getElementById("summaryGPU");
     const summaryRAM = document.getElementById("summaryRAM");
+    const summaryPSU = document.getElementById("summaryPSU");
 
     if (SelectId == "mb") {
         summaryMB.innerText = mb[strAtt].name + " " + mb[strAtt].price
@@ -135,7 +160,12 @@ function SelectedItemValue(SelectId){
         cart[3].price = ram[strAtt].price
         cart[3].name = ram[strAtt].name
     }
-    document.getElementById("sumAll").innerHTML="<b>Wartość produktów: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price)+"</b>"
+    else if (SelectId == "psu") {
+        summaryPSU.innerText = psu[strAtt].name + " " + psu[strAtt].price
+        cart[4].price = psu[strAtt].price
+        cart[4].name = psu[strAtt].name
+    }
+    document.getElementById("sumAll").innerHTML="<b>Wartość produktów: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price+cart[4].price)+"</b>"
 }
 
 for(let i=0; i<mb.length; i++) {
@@ -149,6 +179,9 @@ for(let i=0; i<gpu.length; i++) {
 }
 for(let i=0; i<ram.length; i++) {
     addOpt("ram", ram[i].id, ram[i].name)
+}
+for(let i=0; i<psu.length; i++) {
+    addOpt("psu", psu[i].id, psu[i].name)
 }
 let summaryCompHandler = document.getElementById("summaryComp");
 
