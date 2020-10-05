@@ -1,0 +1,17 @@
+body{
+    background-image: url("../img/tło2.png");
+    background-size: cover;
+    color:white;
+    font-family: Lato;
+    font-size: x-large;
+}
+#summaryComp{
+    border-top 4px solid lightblue
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+#rame{
+    border-top:4px solid lightblue;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
