@@ -141,27 +141,27 @@ function SelectedItemValue(SelectId){
     const summaryPSU = document.getElementById("summaryPSU");
 
     if (SelectId == "mb") {
-        summaryMB.innerText = mb[strAtt].name + " " + mb[strAtt].price
+        summaryMB.innerText = '<div class="colName">'+ mb[strAtt].name + '</div><div class="colPrice">' + mb[strAtt].price + '</div>';
         cart[0].price = mb[strAtt].price
         cart[0].name = mb[strAtt].name
     }
     else if (SelectId == "cpu") {
-        summaryCPU.innerText = cpu[strAtt].name + " " + cpu[strAtt].price
+        summaryCPU.innerText = '<div class="colName">'+ cpu[strAtt].name + '</div><div class="colPrice">' + cpu[strAtt].price + '</div>';
         cart[1].price = cpu[strAtt].price
         cart[1].name = cpu[strAtt].name
     }
     else if (SelectId == "gpu") {
-        summaryGPU.innerText = gpu[strAtt].name + " " + gpu[strAtt].price
+        summaryGPU.innerText = '<td>' + gpu[strAtt].name + '</td><td>' + gpu[strAtt].price + '</td>';
         cart[2].price = gpu[strAtt].price
         cart[2].name = gpu[strAtt].name
     }
     else if (SelectId == "ram") {
-        summaryRAM.innerText = ram[strAtt].name + " " + ram[strAtt].price
+        summaryRAM.innerText = '<td>' + ram[strAtt].name + '</td><td>' + ram[strAtt].price + '</td>';
         cart[3].price = ram[strAtt].price
         cart[3].name = ram[strAtt].name
     }
     else if (SelectId == "psu") {
-        summaryPSU.innerText = psu[strAtt].name + " " + psu[strAtt].price
+        summaryPSU.innerText = '<td>' + psu[strAtt].name + '</td><td>' + psu[strAtt].price + '</td>';
         cart[4].price = psu[strAtt].price
         cart[4].name = psu[strAtt].name
     }
