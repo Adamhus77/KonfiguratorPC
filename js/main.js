@@ -3,19 +3,22 @@ const mb = [                    /* produkt 0 */
         id: 0,
         name:"Gigabyte B450 AORUS ELITE",
         price: 409,
-        producent:"Gigabyte"
+        producent:"Gigabyte",
+        img: ""
     },
     {
         id: 1,
         name:"MSI B450M PRO-VDH MAX",
         price: 329,
-        producent:"MSI"
+        producent:"MSI",
+        img: ""
     },
     {
         id: 2,
         name:"MSI B450 TOMAHAWK MAX",
         price: 469,
-        producent:"MSI"
+        producent:"MSI",
+        img: ""
     },
 ]
 const cpu = [                    /* produkt 1 */
@@ -23,7 +26,8 @@ const cpu = [                    /* produkt 1 */
         id: 0,
         name:"AMD Ryzen 3 3100, 3.6GHz, 16 MB, BOX",
         price: 479,
-        producent:"AMD"
+        producent:"AMD",
+        img: ""
     },
     {
         id: 1,
@@ -141,27 +145,27 @@ function SelectedItemValue(SelectId){
     const summaryPSU = document.getElementById("summaryPSU");
 
     if (SelectId == "mb") {
-        summaryMB.innerText = '<div class="colName">'+ mb[strAtt].name + '</div><div class="colPrice">' + mb[strAtt].price + '</div>';
+        summaryMB.innerHTML = "<td><img src='img/"+mb[strAtt].img+"'></td><td>"+mb[strAtt-1].name+"</td><td>"+mb[strAtt-1].price+"</td>"
         cart[0].price = mb[strAtt].price
         cart[0].name = mb[strAtt].name
     }
     else if (SelectId == "cpu") {
-        summaryCPU.innerText = '<div class="colName">'+ cpu[strAtt].name + '</div><div class="colPrice">' + cpu[strAtt].price + '</div>';
+        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt].img+"'></td><td>"+cpu[strAtt-1].name+"</td><td>"+cpu[strAtt-1].price+"</td>"
         cart[1].price = cpu[strAtt].price
         cart[1].name = cpu[strAtt].name
     }
     else if (SelectId == "gpu") {
-        summaryGPU.innerText = '<td>' + gpu[strAtt].name + '</td><td>' + gpu[strAtt].price + '</td>';
+        summaryGPU.innerHTML = "<td><img src='img/"+gpu[strAtt].img+"'></td><td>"+gpu[strAtt-1].name+"</td><td>"+gpu[strAtt-1].price+"</td>"
         cart[2].price = gpu[strAtt].price
         cart[2].name = gpu[strAtt].name
     }
     else if (SelectId == "ram") {
-        summaryRAM.innerText = '<td>' + ram[strAtt].name + '</td><td>' + ram[strAtt].price + '</td>';
+        summaryRAM.innerHTML = "<td><img src='img/"+ram[strAtt].img+"'></td><td>"+ram[strAtt-1].name+"</td><td>"+ram[strAtt-1].price+"</td>"
         cart[3].price = ram[strAtt].price
         cart[3].name = ram[strAtt].name
     }
     else if (SelectId == "psu") {
-        summaryPSU.innerText = '<td>' + psu[strAtt].name + '</td><td>' + psu[strAtt].price + '</td>';
+        summaryPSU.innerHTML = "<td><img src='img/"+psu[strAtt].img+"'></td><td>"+psu[strAtt-1].name+"</td><td>"+psu[strAtt-1].price+"</td>"
         cart[4].price = psu[strAtt].price
         cart[4].name = psu[strAtt].name
     }

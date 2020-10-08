@@ -15,7 +15,9 @@ body{
     margin-top: 12px;
     margin-bottom: 10px;
 }
-
+table#summaryComp {
+	width: 50%;
+}
 #summaryComp div {
     display: block;
 }
@@ -25,3 +27,8 @@ body{
     font-size: large;
     background-color: #060a26;
 }
+table#summaryComp,
+table#summaryComp td {
+	border: 2px solid lightblue;
+	border-collapse: collapse;
+	}
