@@ -9,6 +9,7 @@ body{
     background-size: cover;
     color:white;
     font-family: Lato;
+    text-shadow: 1px 1px #202c36;
     font-size: x-large;
 }
 #line{
@@ -41,4 +42,29 @@ table#summaryComp td {
 #summaryComp img {
     width: 100px;
     height: auto;
+}
+#sumAll{
+    width:200px;
+    background-color: #060a26;
+    position: absolute;
+    top:10px;
+    right:30px;
+    border: 2px solid lightblue;
+}
+table#summaryComp {
+    width: 60%;
+    margin: 0 auto;
+    margin-top:10px;
+}
+table#summaryComp td{
+    text-align: center;
+}
+table#summaryComp td:nth-child(1){
+    width:25%
+}
+table#summaryComp td:nth-child(2){
+    width:50%
+}
+table#summaryComp td:nth-child(3){
+    width:25%
 }

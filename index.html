@@ -47,6 +47,41 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td>Dysk twardy:</td>
+                <td>
+                    <select name="hdd" id="hdd" onchange="SelectedItemValue('hdd')">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Obudowa:</td>
+                <td>
+                    <select name="cas" id="cas" onchange="SelectedItemValue('cas')">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Monitor:</td>
+                <td>
+                    <select name="viv" id="viv" onchange="SelectedItemValue('viv')">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>System operacyjny:</td>
+                <td>
+                    <select name="sys" id="sys" onchange="SelectedItemValue('sys')">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Antywirus:</td>
+                <td>
+                    <select name="ant" id="ant" onchange="SelectedItemValue('ant')">
+                    </select>
+                </td>
+            </tr>
         </table>
     </section>
     <section id="line">
@@ -57,6 +92,11 @@
         <tr id="summaryGPU"></tr>
         <tr id="summaryRAM"></tr>
         <tr id="summaryPSU"></tr>
+        <tr id="summaryHDD"></tr>
+        <tr id="summaryCAS"></tr>
+        <tr id="summaryVIV"></tr>
+        <tr id="summarySYS"></tr>
+        <tr id="summaryANT"></tr>
     </table>
     <div id="sumAll"></div>
     <section id="border">
